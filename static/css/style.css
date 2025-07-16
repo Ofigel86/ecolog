@@ -1,93 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    line-height: 20px;
-    background-color: #fff;
-    color: #272727;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #f8f9fa;
 }
 
-h1, h2, p {
-    margin: 0;
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    margin-right: 20px;
 }
 
-.header {
-    background-image: url("../img/back.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-color: #CCE59D;
-    padding: 25vh 30px;
-    margin-bottom: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+nav ul li {
+    margin-left: 20px;
 }
 
-.header__text {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: fit-content;
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+.container {
+    padding: 2rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.secondary {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.result-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    color: #7f8c8d;
+}
+
+/* Стили калькулятора */
+.calculator {
+    max-width: 300px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     text-align: right;
 }
 
-main {
-    padding: 0 30px 100px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
-.main__title {
-    text-align: center;
-    margin-bottom: 100px;
+.buttons button {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #e0e0e0;
+    transition: background 0.3s;
 }
 
-.list {
-    display: flex;
-    justify-content: space-around;
+.buttons button:hover {
+    background: #d0d0d0;
 }
 
-.list__item a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: inherit;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 24px;
-    border: 1px solid #EB8028;
-    transition: 0.2s;
-}
-.item__img {
-    object-fit: contain;
-    width: 150px;
-}
-
-.list__item a:hover {
-    box-shadow: 1px 1px 4px 4px #0EB07C;
-}
-
-.main__rez {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.rez__img {
-    object-fit: contain;
-    width: 300px;
-}
-
-.main__title--margin {
-    margin-bottom: 50px;
+.clear {
+    grid-column: span 4;
+    background: #e74c3c !important;
+    color: white;
 }

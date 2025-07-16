@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Kodland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Форма регистрации</h1>
+        
+        <form action="/submit_form" method="post">
+            <div class="form-group">
+                <label for="name">Ф.И.О.:</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше ФИО" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Адрес:</label>
+                <input type="text" id="address" name="address" placeholder="Ваш адрес" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
